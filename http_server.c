@@ -60,7 +60,7 @@ int main(){
             exit(0);
         }
         else {
-             char msg[] = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<html><body><h1>Hello World</h1></body></html>\n";
+             char msg[] = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<html><body><h1>Xin chao cac ban!</h1></body></html>\n";
              send(client, msg, strlen(msg), 0);
         }
         close(client);
