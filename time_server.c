@@ -60,7 +60,8 @@ int main(){
                 printf("Xau nhan duoc: %s", buf);
                 char todo[15];
                 char format[20];
-                int n = sscanf(buf, "%s %s", todo, format);
+                char abun[20];
+                int n = sscanf(buf, "%s %s %s", todo, format, abun);
                 
                 if (n != 2 || strcmp(todo, "GET_TIME") != 0 || 
                     (strcmp(format, "dd/mm/yyyy") != 0 &&
