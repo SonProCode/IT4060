@@ -24,7 +24,7 @@ int main(){
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    addr.sin_port = htons(8002);
+    addr.sin_port = htons(8003);
 
     // Gan socket voi cau truc dia chi
     if (bind(listener, (struct sockaddr *)&addr, sizeof(addr))) {
@@ -41,7 +41,7 @@ int main(){
     signal(SIGCHLD, signalHanlder);
     char buf[2048];
     while(1){
-        printf("Waitng for new client....\n");
+        //printf("Waitng for new client....\n");
         int client = accept(listener, NULL, NULL);
         if (client == -1) continue;
         printf("New client accepted, client = %d\n", client);
